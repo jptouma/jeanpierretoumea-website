@@ -1,0 +1,291 @@
+@charset "utf-8";
+
+
+/* ---------------------------------------- */
+/* ----------- Universal Setup ------------ */
+/* ---------------------------------------- */
+* {
+  /* border: 1px dashed black; */
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*:focus {outline: none;}
+
+html, body {
+  background-color: #FFFFFF;
+  color: #FFFFFF;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility !important;
+}
+
+
+/* ---------------------------------------- */
+/* -------------- Grid Layout ------------- */
+/* ---------------------------------------- */
+/* ----- Body ----- */
+body {
+  display: grid;
+  grid-template-rows: auto 1.25em;
+  row-gap: 2em;
+  width: 1140px;
+  margin: 0 auto;
+  padding: 4em 2em 2em;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 0.5fr;
+}
+
+/* ----- Main ----- */
+main {grid-template-areas: "image content nav";}
+.grid-item-1 {grid-area: image;}
+.grid-item-2 {grid-area: content;}
+.grid-item-3 {grid-area: nav;}
+
+/* ----- Footer ----- */
+footer {grid-template-areas: "copy . contact";}
+.grid-item-4 {grid-area: copy;}
+.grid-item-5 {grid-area: contact;}
+
+
+/* ---------------------------------------- */
+/* -------- Reusable UI Components -------- */
+/* ---------------------------------------- */
+h1, h2, h3, h4, h5, h6, p, ul, section, div, span {
+  margin: 0;
+  padding: 0;
+}
+
+p {font-size: 1.25em;}
+
+/* ------ Links & Buttons ------ */
+a:link,
+a:visited {
+  color: #0F0F0F;
+  font-size: 1.25em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.button:link,
+.button:visited {
+  display: block;
+  padding: 0.975em 0;
+  background-color: #F8B831;
+  text-align: center;
+}
+
+.button:hover,
+.button:active {
+  background-color: #0F0F0F;
+  color: #FFFFFF;
+}
+
+/* ------ Animations ------ */
+
+
+
+/* ---------------------------------------- */
+/* --------------- Sections --------------- */
+/* ---------------------------------------- */
+/* ------ Main ------ */
+main {
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 0px 16px 16px rgba(232,232,232,1);
+  -moz-box-shadow: 0px 0px 16px 16px rgba(232,232,232,1);
+  box-shadow: 0px 0px 16px 16px rgba(232,232,232,1);
+}
+
+/* --- Portrait Image --- */
+.grid-item-1 {
+  padding: 2em;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  background-image: url("../images/portrait-image-2x.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Logo */
+.logo:link,
+.logo:visited {
+  display: inline-block;
+  font-family: vortice-concept, sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+/* --- Content --- */
+.grid-item-2 {
+  padding: 2em;
+  background-color: #758573;
+}
+
+.section-title {
+  font-family: vortice-concept, sans-serif;
+  font-size: 0.8em;
+}
+
+h1 {
+  margin-top: 2em;
+  font-size: 2.441em;
+}
+
+.tagline {margin-top: 0.512em;}
+
+mark {
+  display: inline-block;
+  padding: 0.134em 0.262em;
+  transform: rotate(-0.5deg);
+  background-color: #F8B831;
+  color: #FFFFFF;
+}
+
+.description {margin-top: 1em;}
+
+/* Technologies */
+.tech-container {margin-top: 2em;}
+
+.tech-container span {
+  display: inline-block;
+  margin-right: 0.262em;
+  padding: 0.262em 0.512em;
+  background-color: #0F0F0F;
+  font-weight: 500;
+}
+
+/* Profile Icons */
+.profile-icons {
+  margin-top: 0.512em;
+  text-align: right;
+}
+
+.profile-icons a:link,
+.profile-icons a:visited {
+  display: inline-block;
+  color: #FFFFFF;
+  font-size: 2.375em;
+}
+
+.profile-icons a:hover,
+.profile-icons a:active {color: #0F0F0F;}
+
+.uil-github::before {margin: 0;}
+.uil-github {display:block;}
+
+/* --- Nav --- */
+.grid-item-3 {
+  padding: 2em;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #0F0F0F;
+  text-align: center;
+}
+
+nav {margin-top: 5em;}
+ul {list-style-type: none;}
+li { margin-bottom: 2em;}
+
+li a:link,
+li a:visited {
+  color: #FFFFFF;
+  font-size: 1.563em;
+  text-transform: none;
+}
+
+li a:hover,
+li a:active {color: #F8B831;}
+
+/* ------ Footer ------ */
+/* --- Copyright --- */
+.copyright {
+  color: #0F0F0F;
+  font-size: 1em;
+}
+
+.grid-item-5 {text-align: right;}
+
+.contact:link,
+.contact:visited {
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.contact:hover,
+.contact:active {text-decoration: underline;}
+
+
+/* ---------------------------------------- */
+/* ------------- Media Queries ------------ */
+/* ---------------------------------------- */
+@media only screen and (max-width: 1139px) {
+  /* ----- Grid Layout ----- */
+  /* --- Body --- */
+  body {width: 100%}
+}
+
+@media only screen and (max-width: 1020px) {
+  /* ----- Grid Layout ----- */
+  /* --- Body --- */
+  body {
+    grid-template-rows: auto;
+    padding: 2em;
+  }
+
+  .grid-container {grid-template-columns: 100%;}
+
+  /* --- Main --- */
+  main {grid-template-areas: "image"
+                             "content"
+                             "nav";
+  }
+
+  /* --- Footer --- */
+  footer {grid-template-areas: "copy"
+                               "."
+                               "contact";
+  }
+
+  /* ----- Sections ----- */
+  /* --- Main --- */
+  /* Portrait Image */
+  .grid-item-1 {
+    background-image: url("../images/portrait-image-1x.jpg");
+    border-radius: 2px 2px 0 0;
+  }
+
+  /* Logo */
+  .logo:link,
+  .logo:visited {color: #FFFFFF;}
+
+  /* Nav */
+  .grid-item-3 {border-radius: 0 0 2px 2px;}
+
+  /* --- Footer --- */
+  footer {
+    row-gap: 0.512em;
+    background-color: #FFFFFF;
+    text-align: center;
+  }
+
+  .grid-item-5 {text-align: center;}
+}
+
+@media only screen and (max-width: 684px) {
+  html, body {font-size: 14px;}
+}
+
+@media only screen and (max-width: 345px) {
+  html, body {font-size: 12px;}
+}
