@@ -1,0 +1,1560 @@
+@charset "utf-8";
+
+
+/* ---------------------------------------- */
+/* ----------- UNIVERSAL SETUP ------------ */
+/* ---------------------------------------- */
+* {
+  /* border: 1px dashed black; */
+  /* Experimental */
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*:focus {outline:none;}
+
+html, body {
+  /* font-size: 16px; */
+  /* Experimental */
+  background-color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: normal;
+  text-rendering: optimizeLegibility !important;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+
+
+
+
+/* ---------------------------------------- */
+/* -------------- GRID LAYOUT ------------- */
+/* ---------------------------------------- */
+.major-grid {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+}
+
+.minor-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 70rem;
+  margin: 0 auto;
+}
+
+/* === Section Header === */
+.section-header-container {padding: 4rem 0 8rem;}
+
+.section-header {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+
+
+/* ----------| HEADER SECTION |---------- */
+.header-section {row-gap: 3.3rem;}
+
+
+
+
+
+/* ---------------------------------------- */
+/* -------- REUSABLE UI COMPONENTS -------- */
+/* ---------------------------------------- */
+h1, h2, h3, h4, h5, h6, p, ul, li, section, div, span {
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix::after {
+  display: table;
+  clear: both;
+  content: " ";
+}
+
+
+
+/* ----------| BACKGROUNDS |---------- */
+.light-turquoise-gradient-background {
+  background: rgb(41,161,156);
+  background: 
+    -o-linear-gradient(74deg, 
+    rgba(41,161,156,1) 0%, 
+    rgba(163,247,191,1) 100%);
+  background: 
+    linear-gradient(16deg, 
+    rgba(41,161,156,1) 0%, 
+    rgba(163,247,191,1) 100%);
+}
+
+.dark-charcoal-gradient-background {
+  background: rgb(34,40,49);
+  background: 
+    -o-linear-gradient(74deg, 
+    rgba(34,40,49,1) 0%, 
+    rgba(57,62,70,1) 100%);
+  background: 
+    linear-gradient(16deg, 
+    rgba(34,40,49,1) 0%, 
+    rgba(57,62,70,1) 100%);
+}
+
+.turquoise-gradient-background {
+  background: rgb(114,175,211);
+  background: 
+    -o-linear-gradient(45deg, 
+    rgba(114,175,211,1) 0%, 
+    rgba(55,236,186,1) 100%);
+  background: 
+    linear-gradient(45deg, 
+    rgba(114,175,211,1) 0%, 
+    rgba(55,236,186,1) 100%);
+}
+
+.orange-gradient-background {
+  background: rgb(253,160,133);
+  background: 
+    -o-linear-gradient(45deg, 
+    rgba(253,160,133,1) 0%, 
+    rgba(246,211,101,1) 100%);
+  background: 
+    linear-gradient(45deg, 
+    rgba(253,160,133,1) 0%, 
+    rgba(246,211,101,1) 100%);
+}
+
+.pink-gradient-background {
+  background: rgb(237,110,160);
+  background: 
+    -o-linear-gradient(45deg, 
+    rgba(237,110,160,1) 0%, 
+    rgba(236,140,105,1) 100%);
+  background: 
+    linear-gradient(45deg, 
+    rgba(237,110,160,1) 0%, 
+    rgba(236,140,105,1) 100%);
+}
+
+
+
+/* ----------| TYPOGRAPHY |---------- */
+/* +++++| Headings & Paragraphs |+++++ */
+/* === Headings === */
+h2, h3, h4 {
+  color: #393E46;
+  font-weight: 500;
+}
+
+h2 {font-size: 2.441rem;}
+h3 {font-size: 1.953rem;}
+h4 {font-size: 1.563rem;}
+
+/* === Paragraphs === */
+p.default-paragraph,
+.default-paragraph {
+  color: #8A929F;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+/* === Section Header === */
+.section-header {text-align: center;}
+
+/* Section Title */
+.section-title {
+  margin-bottom: 4rem;
+  color: #6CDEA1;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Section Heading */
+.section-heading-lvl-2 {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 0 4rem;
+}
+
+/* Section Description */
+.section-description {
+  width: 100%;
+  padding: 0 18rem;
+}
+
+/* === Sub-Section Header === */
+.subsection-header {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+/* Sub-Section Heading */
+.subsection-heading-lvl-3 {
+  width: 100%;
+  padding: 0 14rem;
+}
+
+
+
+/* ----------| LINKS & BUTTONS |---------- */
+/* +++++| Links |+++++ */
+a:link,
+a:visited,
+input[type=submit] {
+  display: block;
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {color: #FFFFFF;}
+
+
+/* +++++| Buttons |+++++ */
+/* === All Buttons === */
+.button:link,
+.button:visited,
+input[type=submit] {
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.16);
+          box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.16);
+  -webkit-transition: background-color 0.3s, color 0.3s, -webkit-box-shadow 0.3s;
+  transition: background-color 0.3s, color 0.3s, -webkit-box-shadow 0.3s;
+  -o-transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s, -webkit-box-shadow 0.3s;
+}
+
+.button:hover,
+.button:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/* === Default Button === */
+.default-button:link,
+.default-button:visited {
+  background-color: #FFFFFF;
+  color: #393E46;
+}
+
+.default-button:hover,
+.default-button:active {
+  background-color: #393E46;
+  color: #FFFFFF;
+}
+
+/* === Turquoise Gradient Button === */
+.turquoise-gradient-button:link,
+.turquoise-gradient-button:visited,
+input[type=submit] {
+  display: block;
+  background: rgb(114,175,211);
+  background: 
+    -o-linear-gradient(45deg, 
+    rgba(114,175,211,1) 0%, 
+    rgba(55,236,186,1) 100%);
+  background: 
+    linear-gradient(45deg, 
+    rgba(114,175,211,1) 0%, 
+    rgba(55,236,186,1) 100%);
+  color: #FFFFFF;
+}
+
+/* === Orange Gradient Button === */
+.orange-gradient-button:link,
+.orange-gradient-button:visited {
+  display: block;
+  background: rgb(253,160,133);
+  background: 
+    -o-linear-gradient(45deg, 
+    rgba(253,160,133,1) 0%, 
+    rgba(246,211,101,1) 100%);
+  background: 
+    linear-gradient(45deg, 
+    rgba(253,160,133,1) 0%, 
+    rgba(246,211,101,1) 100%);
+  color: #FFFFFF;
+}
+
+/* === Pink Gradient Button === */
+.pink-gradient-button:link,
+.pink-gradient-button:visited {
+  display: block;
+  background: rgb(237,110,160);
+  background: 
+    -o-linear-gradient(45deg, 
+    rgba(237,110,160,1) 0%, 
+    rgba(236,140,105,1) 100%);
+  background: 
+    linear-gradient(45deg, 
+    rgba(237,110,160,1) 0%, 
+    rgba(236,140,105,1) 100%);
+  color: #FFFFFF;
+}
+
+
+
+/* ----------| ICONS |---------- */
+.uil::before {margin: 0;}
+.uil {display:inline-block;}
+
+
+
+
+
+/* ---------------------------------------- */
+/* --------------- SECTIONS --------------- */
+/* ---------------------------------------- */
+/* ----------| HEADER SECTION |---------- */
+.header-section {
+  position: relative;
+  padding-top: 10rem;
+  border-bottom: 1px solid #EAECF0;
+}
+
+
+/* +++++| Nav Bar Container |+++++ */
+.nav-bar-container {
+  position: absolute;
+  z-index: 666;
+  width: 100%;
+  padding: 2rem 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* === Logo === */
+.logo-image,
+.logo-image-dark {
+  display: block;
+  width: 6.25rem;
+  height: auto;
+}
+
+.logo-image-dark {display: none;}
+
+/* === Nav === */
+/* Main Nav */
+.main-nav ul {list-style-type: none;}
+
+.main-nav ul li {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.main-nav ul li:last-child {margin-right: 0;}
+.nav-link {padding-top: 0.15rem;}
+
+.nav-link:link::after,
+.nav-link:link::after {
+  display: block;
+  width: 0;
+  height: 2px;
+  margin-top: 0.4rem;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  content: " ";
+}
+
+.nav-link:hover::after,
+.nav-link:active::after {
+  width: 99%;
+  margin-left: auto;
+  visibility: visible;
+}
+
+/* Sticky Nav */
+.sticky-nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 16px 16px 0px rgba(0,0,0,0.08);
+          box-shadow: 0px 16px 16px 0px rgba(0,0,0,0.08);
+}
+
+.sticky-nav .logo-image {display: none;}
+.sticky-nav .logo-image-dark {display: block;}
+.sticky-nav .mobile-nav-icon {color: #393E46;}
+
+.sticky-nav .nav-link:link,
+.sticky-nav .nav-link:visited {color: #393E46;}
+
+.sticky-nav .nav-link:link::after,
+.sticky-nav .nav-link:visited::after {background-color: #393E46;}
+
+/* Mobile Nav */
+.nav-bar-container-mobile {
+  width: 100%;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 16px 16px 0px rgba(0,0,0,0.08);
+          box-shadow: 0px 16px 16px 0px rgba(0,0,0,0.08);
+}
+
+.nav-bar-container-mobile .logo-image {display: none;}
+.nav-bar-container-mobile .logo-image-dark {display: block;}
+.nav-bar-container-mobile .mobile-nav-icon {color: #393E46;}
+
+.nav-bar-container-mobile .nav-link:link,
+.nav-bar-container-mobile .nav-link:visited {color: #393E46;}
+
+.nav-bar-container-mobile .nav-link:hover,
+.nav-bar-container-mobile .nav-link:active {color: #8A929F;}
+
+.mobile-nav-icon {
+  display: none;
+  cursor: pointer;
+}
+
+
+/* +++++| Header Content Container |+++++ */
+.header-content-container {padding-bottom: 2.6rem;}
+
+/* === Header Text === */
+.header-text {padding-top: 9.7rem;}
+
+.header-text h1 {
+  margin-bottom: 0.2rem;
+  color: #FFFFFF;
+  font-size: 3.815rem;
+}
+
+.header-text p {
+  margin-bottom: 2rem;
+  color: #FFFFFF;
+  font-size: 1.563rem;
+}
+
+.learn-more-link:link,
+.learn-more-link:visited {
+  display: inline-block;
+  margin-left: 1.65rem;
+}
+
+.learn-more-link:link span,
+.learn-more-link:visited span {
+  margin-right: 0.5rem;
+  -webkit-transition: margin-right 0.3s;
+  -o-transition: margin-right 0.3s;
+  transition: margin-right 0.3s;
+}
+
+.learn-more-link:hover span,
+.learn-more-link:active span {margin-right: 0.75rem;}
+
+/* === Marketing Image === */
+.marketing-image img {
+  display: block;
+  width: 40rem;
+  height: auto;
+  margin-left: auto;
+}
+
+
+/* +++++| Niches Container |+++++ */
+.niches-container {
+  padding: 3.7rem 0;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px -16px 16px 0px rgba(0,0,0,0.08);
+          box-shadow: 0px -16px 16px 0px rgba(0,0,0,0.08);
+}
+
+/* === Niche === */
+.niche {text-align: center;}
+
+
+
+/* ----------| ABOUT US SECTION | PLATFORM |---------- */
+.about-us-platform-section {border-bottom: 1px solid #EAECF0;}
+
+
+/* +++++| Section Header Container |+++++ */
+.about-us-platform-section .section-header-container {padding-bottom: 3.4rem;}
+
+/* === Section Header === */
+/* Section Heading */
+.about-us-platform-section .section-heading-lvl-2 {margin-bottom: 0;}
+
+
+/* +++++| Clients Container |+++++ */
+.clients-container {padding-bottom: 4rem;}
+
+/* === Office Image === */
+.office-image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 4.5rem;
+  margin-left: 4rem;
+}
+
+.office-image img {
+  display: block;
+  height: auto;
+}
+
+/* === Clients Lists === */
+.clients-lists {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-top: 5.8rem;
+}
+
+/* Client List */
+.client-list {margin-bottom: 2rem;}
+.client-list:nth-child(2) {margin-bottom: 0rem;}
+.client-list h3 {margin-bottom: 0.5rem;}
+.client-list ul {list-style-type: none;}
+
+
+/* +++++| Platform Features Lists Container |+++++ */
+.platform-features-lists-container {padding-bottom: 8rem;}
+
+/* === Platform Features List === */
+.platform-features-list {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 2rem;
+}
+
+.platform-features-list:nth-child(2) {margin-right: 0;}
+
+/* Platform Feature */
+.platform-feature {padding-bottom: 2rem;}
+.platform-feature:last-child {padding-bottom: 0;}
+.platform-feature h4 {margin-bottom: 0.5rem;}
+
+
+
+/* ----------| ABOUT US SECTION | VALUES |---------- */
+.about-us-values-section {border-bottom: 1px solid #EAECF0;}
+
+
+/* +++++| Social Lists Cards Container |+++++ */
+.social-lists-cards-container {
+  position: relative;
+  padding-bottom: 6rem;
+}
+
+/* === Sub-Section Header === */
+.social-lists-cards-container .subsection-header {margin-bottom: 3rem;}
+
+/* === Glider Container === */
+.glider-contain {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+/* Arrow Buttons */
+.glider-prev,
+.glider-next {
+  position: absolute;
+  top: 40%;
+}
+
+.glider-prev {left: -4rem;}
+.glider-next {right: -4rem;}
+
+.arrow-left button,
+.arrow-right button {
+  display: block;
+  width: 3rem;
+  border: none;
+  background-color: #FFFFFF;
+}
+
+.uil-arrow-circle-left,
+.uil-arrow-circle-right {
+  color: #8A929F;
+  font-size: 3rem;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.uil-arrow-circle-left:hover,
+.uil-arrow-circle-right:hover {color: #6CDEA1;}
+
+/* Dots */
+.glider-dot.active {background: #6CDEA1;}
+
+/* === Social Lists Cards === */
+.social-lists-cards {
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
+  overflow-x: hidden;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+/* Social List Card */
+.social-list-card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 2rem;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.16);
+          box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.16);
+  background-color: #FFFFFF;
+}
+
+/* Social List Icon Section */
+.social-list-icon-section {
+  padding: 1.875rem 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.social-list-icon-section .uil {
+  display: block;
+  color: #FFFFFF;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.social-list-icon-section.fb-card {
+  background: rgb(59,89,152);
+  background: 
+    -o-linear-gradient(45deg, 
+    rgba(59,89,152,1) 0%, 
+    rgba(101,131,195,1) 100%);
+  background: 
+    linear-gradient(45deg, 
+    rgba(59,89,152,1) 0%, 
+    rgba(101,131,195,1) 100%);
+}
+
+.social-list-icon-section.ig-card {
+  background: rgb(63,114,155);
+  background: 
+    -o-linear-gradient(45deg, 
+    rgba(63,114,155,1) 0%, 
+    rgba(108,156,195,1) 100%);
+  background: 
+    linear-gradient(45deg, 
+    rgba(63,114,155,1) 0%, 
+    rgba(108,156,195,1) 100%);
+}
+
+.social-list-icon-section.twitter-card {
+  background: rgb(0,172,238);
+  background: 
+    -o-linear-gradient(45deg, 
+    rgba(0,172,238,1) 0%, 
+    rgba(102,213,255,1) 100%);
+  background: 
+    linear-gradient(45deg, 
+    rgba(0,172,238,1) 0%, 
+    rgba(102,213,255,1) 100%);
+}
+
+.social-list-icon-section.yt-card {
+  background: rgb(196,48,43);
+  background: 
+    -o-linear-gradient(45deg, 
+    rgba(196,48,43,1) 0%, 
+    rgba(218,93,88,1) 100%);
+  background: 
+    linear-gradient(45deg, 
+    rgba(196,48,43,1) 0%, 
+    rgba(218,93,88,1) 100%);
+}
+
+.social-list-icon-section.linkedin-card {
+  background: rgb(14,118,168);
+  background: 
+    -o-linear-gradient(45deg, 
+    rgba(14,118,168,1) 0%, 
+    rgba(19,162,231,1) 100%);
+  background: 
+    linear-gradient(45deg, 
+    rgba(14,118,168,1) 0%, 
+    rgba(19,162,231,1) 100%);
+}
+
+/* Social List Items Section */
+.social-list-items-section {
+  padding: 2rem;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.social-list-item {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.social-list-item:last-child {margin-bottom: 0;}
+.social-list-item h4 {margin-bottom: 0.5rem;}
+
+
+/* +++++| Values & Benefits Container |+++++ */
+.values-container,
+.benefits-container {padding-bottom: 8rem;}
+
+/* === Values & Benefits Cards === */
+.value-card,
+.benefit-card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 2rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.value-card:last-child,
+.benefit-card:last-child {margin-right: 0;}
+
+.benefit-card img {
+  width: auto;
+  height: 4rem;
+  margin-bottom: 2rem;
+}
+
+.value-card h4,
+.benefit-card h4 {margin-bottom: 1rem;}
+
+.value-percentage {
+  margin-bottom: 1rem;
+  color: #6CDEA1;
+  font-size: 3.052rem;
+  font-weight: 600;
+}
+
+
+
+/* ----------| PROCESS SECTION |---------- */
+/* +++++| Section Header Container |+++++ */
+/* === Section Header === */
+/* Section Heading */
+.process-section .section-heading-lvl-2 {margin-bottom: 0;}
+
+
+/* +++++| Process Container |+++++ */
+.process-container {padding-bottom: 8rem;}
+
+/* === Process Image === */
+.process-image {
+  width: 40rem;
+  height: 100%;
+  margin: 0 auto;
+}
+
+
+
+/* ----------| PRICING SECTION |---------- */
+.pricing-section {border-bottom: 1px solid #393E46;}
+
+
+/* +++++| Section Header Container |+++++ */
+/* === Section Header === */
+/* Section Heading */
+.pricing-section .section-heading-lvl-2 {color: #FFFFFF;}
+.pricing-section .section-description {color: #EAECF0;}
+
+
+/* +++++| Badges Container |+++++ */
+.badges-container {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-bottom: 4rem;
+}
+
+/* === Badge === */
+.badge {
+  padding: 1.188rem 1rem 1.1rem;
+  border-radius: 4px;
+  background-color: #393E46;
+}
+
+/* Badge Image */
+.badge img {
+  display: block;
+  float: left;
+  width: 3.875rem;
+  height: auto;
+}
+
+/* Badge Text */
+.badge div {
+  float: right;
+  height: auto;
+  margin-left: 0.875rem;
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.badge div span {font-weight: 400;}
+
+
+/* +++++| Pricing Lists Cards Container |+++++ */
+.pricing-lists-cards-container {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-bottom: 8rem;
+}
+
+/* === Pricing List Card === */
+.pricing-list-card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 2rem;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.16);
+          box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.16);
+  background-color: #FFFFFF;
+}
+
+.pricing-list-card:last-child {margin-right: 0;}
+
+/* Pricing List Name Section */
+.pricing-list-name-section {
+  padding: 2rem;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  color: #FFFFFF;
+  font-size: 1.563rem;
+  text-align: center;
+}
+
+.pricing-list-name {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.pricing-list-price {font-weight: 600;}
+
+/* Pricing List Items Section */
+.pricing-list-items-section {padding: 2rem;}
+.pricing-list-items-section p strong {font-weight: 500;}
+
+.pricing-list-items-separator {
+  width: 14.5rem;
+  height: 1px;
+  margin: 1rem auto;
+  background-color: #EAECF0;
+}
+
+/* Pricing List Button Section */
+.pricing-list-button-section {padding: 0 2rem 2rem;}
+
+
+/* +++++| Packages Container |+++++ */
+/* === Sub-Section Header === */
+/* Sub-Section Heading */
+.packages-container .subsection-heading-lvl-3 {color: #FFFFFF;}
+
+/* === Packages Cards Container === */
+.packages-cards-container {padding-bottom: 2rem;}
+.packages-cards-container:last-child {padding-bottom: 8rem;}
+
+/* Package Card */
+.package-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 2rem;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.16);
+          box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.16);
+}
+
+.package-card:last-child {margin-right: 0;}
+
+/* Icon Section */
+.icon-section {
+  padding: 2rem;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.icon-section img {
+  display: block;
+  width: auto;
+  height: 4rem;
+  margin: 0 auto;
+}
+
+/* Package Description Section */
+.package-description-section {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 2rem;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+
+.package-description-section h4 {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.package-description-section p strong {font-weight: 500;}
+
+/* Package Price Section */
+.package-price-section {
+  padding: 1rem;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: #393E46;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.starting-from {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.package-price {
+  font-size: 1.563rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+
+
+/* ----------| CONTACT US SECTION |---------- */
+/* +++++| Section Header Container |+++++ */
+/* === Section Header === */
+/* Section Heading */
+.contact-us-section .section-heading-lvl-2 {
+  margin-bottom: 0;
+  color: #FFFFFF;
+}
+
+
+/* +++++| Contact Form Card Container |+++++ */
+.contact-form-card-container {padding-bottom: 8rem;}
+
+/* === Contact Form Card === */
+.contact-form-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.16);
+          box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.16);
+}
+
+/* Form Info Section */
+.form-info-section {
+  width: 22rem;
+  padding: 4rem 2rem;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.form-info-section .logo-image {margin-bottom: 15.688rem;}
+.info-section-heading {margin-bottom: 1rem;}
+
+.info-section-message {
+  color: #FFFFFF;
+  font-size: 1.953rem;
+  font-weight: 500;
+}
+
+/* Form */
+.contact-form {
+  -webkit-box-flex: 2.2;
+      -ms-flex: 2.2;
+          flex: 2.2;
+  padding: 4rem;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: #FFFFFF;
+}
+
+.form-field {margin-bottom: 2rem;}
+.form-field:last-of-type {margin-bottom: 4rem;}
+
+.form-field label {
+  display: block;
+  margin-bottom: 1rem;
+  color: #EAECF0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.form-field input,
+.form-field textarea {
+  display: block;
+  width: 100%;
+  padding-bottom: 0.75rem;
+  border: none;
+  border-bottom: 2px solid #EAECF0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #393E46;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.form-field textarea {
+  padding-bottom: 8rem;
+  resize: vertical;
+}
+
+.form-field input::-webkit-input-placeholder,
+.form-field textarea::-webkit-input-placeholder {color: #8A929F;}
+
+.form-field input::-moz-placeholder,
+.form-field textarea::-moz-placeholder {color: #8A929F;}
+
+.form-field input:-ms-input-placeholder,
+.form-field textarea:-ms-input-placeholder {color: #8A929F;}
+
+.form-field input::-ms-input-placeholder,
+.form-field textarea::-ms-input-placeholder {color: #8A929F;}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {color: #8A929F;}
+
+.form-field input:valid:focus,
+.form-field textarea:valid:focus {border-color: #6CDEA1;}
+
+.form-field input:invalid:focus,
+.form-field textarea:invalid:focus {border-color: #ff4d4d;}
+
+select {
+  width: 100%;
+  padding-bottom: 0.75rem;
+  border: none;
+  border-bottom: 2px solid #EAECF0;
+  border-radius: 0;
+  background-color: #FFFFFF;
+  background-image: url(https://unicons.iconscout.com/release/v2.0.1/svg/line/direction.svg);
+  background-repeat: no-repeat;
+  background-size: 28px;
+  background-position: top right;
+  color: #8A929F;
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-align: left;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  appearance: none;
+}
+
+input[type=submit] {
+  border: 0;
+  cursor: pointer;
+}
+
+
+
+/* ----------| FOOTER SECTION |---------- */
+/* +++++| Copyright Container |+++++ */
+.copyright-container {padding: 2rem 0;}
+
+/* === Copyright === */
+.copyright {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+
+
+
+
+/* ---------------------------------------- */
+/* ------------- MEDIA QUERIES ------------ */
+/* ---------------------------------------- */
+/* ----------| DESKTOPS: 1311PX |---------- */
+@media only screen and (max-width: 1311px) {
+
+  /* +++++| Grid Layout |+++++ */
+  .minor-flex {width: 60.5rem;}
+  
+
+
+  /* +++++| Reusable UI Components |+++++ */
+  /* === Typography === */
+  /* Section Header */
+  .section-description {padding: 0 8rem;}
+
+  /* Sub-Section Header */
+  .subsection-heading-lvl-3 {padding: 0 10rem;}
+  
+
+
+  /* +++++| Sections |+++++ */
+  /* === Header Section === */
+  /* Header Content Container */
+  .header-text {padding-top: 7.7rem;}
+  .marketing-image img {width: 32rem;}
+
+
+  /* === About Us Section | Platform === */
+  /* Clients Container */
+  .office-image {margin-left: 0;}
+  .office-image {margin-right: 3rem;}
+  .clients-lists {padding-top: 6rem;}
+
+
+  /* === Process Section === */
+  /* Process Image */
+  .process-image {width: 32rem;}
+
+}
+
+
+
+/* ----------| TABLETS: 1159PX |---------- */
+@media only screen and (max-width: 1159px) {
+
+  /* +++++| Universal Setup |+++++ */
+  html, body {font-size: 86%;}
+
+
+
+  /* +++++| Sections |+++++ */
+  /* === Header Section === */
+  /* Nav Bar Container */
+  .nav-menu {display: block;}
+
+
+  /* === About Us Section | Platform === */
+  /* Clients Container */
+  .office-image img {width: 100%;}
+  .clients-lists {padding-top: 4.2rem;}
+
+
+  /* === Pricing Section === */
+  /* Pricing Lists Cards Container */
+  /* Pricing List Card */
+  .pricing-list-card {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .pricing-list-card:last-child {margin-bottom: 0;}
+  .list-items-section {padding: 2rem 4rem;}
+
+
+  /* === Contact Us Section === */
+  /* Contact Form Card Container */
+  /* Contact Form Card */
+  select {background-size: 20px;}
+
+}
+
+
+
+/* ----------| TABLETS: 1023PX |---------- */
+@media only screen and (max-width: 1023px) {
+
+  /* +++++| Grid Layout |+++++ */
+  .minor-flex {
+    width: 100%;
+    padding-left: 2.286rem;
+    padding-right: 2.286rem;
+  }
+
+
+
+  /* +++++| Reusable UI Components |+++++ */
+  /* === Typography === */
+  /* Section Header */
+  .section-heading-lvl-2 {padding: 0;}
+
+  /* Sub-Section Header */
+  .subsection-heading-lvl-3 {padding: 0 8rem;}
+
+
+
+  /* +++++| Sections |+++++ */
+  /* === Header Section === */
+  /* Nav Bar Container */
+  /* Main Nav */
+  .main-nav {
+    display: none;
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .main-nav ul li {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .main-nav ul li:last-child {margin-bottom: 0;}
+
+  .nav-link:link::after,
+  .nav-link:visited::after {display: none;}
+
+  /* Mobile Nav */
+  .mobile-nav-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #FFFFFF;
+    font-size: 1.953rem;
+    line-height: 0;
+  }
+  
+  /* Header Content Container */
+  .header-section {
+    -webkit-box-flex: 0;
+            -ms-flex: 0 2;
+                flex: 0 2;
+  }
+
+  .header-text {padding-top: 6.7rem;}
+  .marketing-image img {width: 30rem;}
+
+
+  /* === About Us Section | Platform === */
+  /* Clients Container */
+  .office-image {margin-right: 1.5rem;}
+
+
+  /* === About Us Section | Values === */
+  /* Values & Benefits Container */
+  /* Values & Benefits Cards */
+  .value-card,
+  .benefit-card {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+    padding: 0 2rem;
+  }
+
+  .value-card:nth-child(2),
+  .benefit-card:nth-child(2) {margin-right: 0;}
+
+  .value-card:nth-child(1),
+  .value-card:nth-child(2),
+  .benefit-card:nth-child(1),
+  .benefit-card:nth-child(2) {margin-bottom: 2rem;}
+
+  /* Social Lists Cards Container */
+  /* Glider Container */
+  .glider-contain {
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  /* Arrow Buttons */
+  .glider-prev {left: 2rem;}
+  .glider-next {right: 2rem;}
+  
+  /* Social Lists Cards */
+  .social-lists-cards {
+    width: 80vw;
+    padding: 1rem
+  }
+  
+}
+
+
+
+/* ----------| TABLETS: 800PX |---------- */
+@media only screen and (max-width: 800px) {
+
+  /* +++++| Reusable UI Components |+++++ */
+  /* === Typography === */
+  /* Section Header */
+  .section-description {padding: 0 4rem;}
+
+  /* Sub-Section Header */
+  .subsection-heading-lvl-3 {padding: 0 4rem;}
+
+
+  
+  /* +++++| Sections |+++++ */
+  /* === Header Section === */
+  .header-section {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  /* Header Content Container */
+  .header-text {
+    width: 100%;
+    margin: 0 auto 4rem;
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .marketing-image {margin: 0 auto;}
+
+  .marketing-image img {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+
+  /* === About Us Section | Platform === */
+  /* Clients Container */
+  .clients-container {padding-bottom: 8rem;}
+
+  .office-image {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 0 auto;
+  }
+
+  .office-image img {
+    width: 64%;
+    margin: 0 auto;
+  }
+
+  .clients-lists {
+    width: 100%;
+    padding-top: 2rem;
+    text-align: center;
+  }
+
+
+  /* === About Us Section | Values === */
+  /* Social Lists Cards Container */
+  /* Glider Container */
+  .glider-prev {left: 1rem;}
+  .glider-next {right: 1rem;}
+
+
+  /* === Process Section === */
+  /* Process Image */
+  .process-image {width: 68%;}
+  
+  
+  /* === Pricing Section === */
+  /* Packages Container */
+  /* Package Cards */
+  .package-card {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .package-card:last-child {margin-bottom: 0;}
+
+
+  /* === Contact Us Section === */
+  /* Contact Form Card Container */
+  /* Contact Form Card */
+  .contact-form-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  /* Form Info Section */
+  .form-info-section {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    width: unset;
+    padding: 4rem;
+    border-radius: 4px 4px 0 0;
+  }
+
+  .form-info-section .logo-image {margin-bottom: 8rem;}
+
+  /* Contact Form */
+  .contact-form {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    border-radius: 0 0 4px 4px;
+  }
+
+  .form-field label,
+  .form-field input,
+  .form-field textarea,
+  select {font-size: 1.25rem;}
+
+}
+
+
+
+/* ----------| SMARTPHONES: 628PX |---------- */
+@media only screen and (max-width: 628px) {
+
+  /* +++++| Universal Setup |+++++ */
+  html, body {font-size: 75.5%;}
+
+
+
+  /* +++++| Sections |+++++ */
+  /* === Header Section === */
+  /* Header Content Container */
+  .marketing-image img {width: 65%;}
+
+  /* Niches Container */
+  .niche {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .niche:last-child {margin-bottom: 0;}
+
+
+  /* === About Us Section | Platform === */
+  /* Section Header Container */
+  .about-us-platform-section .section-header-container {padding-bottom: 4rem;}
+
+  /* Clients Container */
+  .office-image img {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  /* Platform Features Lists Container */
+  /* Platform Feature List */
+  .platform-features-list {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .platform-features-list:nth-child(2) {margin-bottom: 0;}
+
+
+  /* === About Us Section | Values === */
+  /* Social Lists Cards Container */
+  /* Glider Container */
+  .glider-prev {left: 2rem;}
+  .glider-next {right: 2rem;}
+
+  /* Social Lists Cards */
+  .social-lists-cards {width: 70vw;}
+
+}
+
+
+
+/* ----------| SMARTPHONES: 486PX |---------- */
+@media only screen and (max-width: 486px) {
+
+  /* +++++| Sections |+++++ */
+  /* === About Us Section | Values === */
+  /* Values & Benefits Container */
+  /* Values & Benefits Cards */
+  .value-card,
+  .benefit-card {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-right: 0;
+    margin-bottom: 4rem !important;
+  }
+  
+  .value-card:last-child,
+  .benefit-card:last-child {margin-bottom: 0 !important;}
+
+  /* Social Lists Cards Container */
+  /* Glider Container */
+  .glider-prev {left: 0.5rem;}
+  .glider-next {right: 0.5rem;}
+
+
+  /* === Contact Us Section === */
+  /* Contact Form Card Container */
+  /* Contact Form Card */
+  .form-info-section,
+  .contact-form {padding: 3rem;}
+
+}
+
+
+
+/* ----------| SMARTPHONES: 468PX |---------- */
+@media only screen and (max-width: 468px) {
+
+  /* +++++| Reusable UI Components |+++++ */
+  /* === Typography === */
+  /* Headings & Paragraphs */
+  h2 {font-size: 2.148rem;}
+  .section-description {padding: 0 1rem;}
+  .subsection-heading-lvl-3 {padding: 0 1rem;}
+
+
+
+  /* +++++| Sections |+++++ */
+  /* === Header Section === */
+  /* Header Content Container */
+  .marketing-image img {width: 85%;}
+
+
+  /* === About Us Section | Platform === */
+  /* Clients Container */
+  .office-image img {width: 100%;}
+
+
+  /* === Process Section === */
+  /* Process Image */
+  .process-image {width: 80%;}
+
+}
+
+
+
+/* ----------| SMARTPHONES: 391PX |---------- */
+@media only screen and (max-width: 391px) {
+
+  /* === Pricing Section === */
+  /* Badges Container */
+  .badge {margin-bottom: 2rem;}
+  .badge:last-child {margin-bottom: 0;}
+
+}
